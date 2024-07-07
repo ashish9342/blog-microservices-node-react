@@ -16,3 +16,16 @@ spec:
         - name: posts
           # image: daemonwolfdev/posts:0.0.5
           image: daemonwolfdev/posts
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: posts-clusterip-srv
+spec:
+  selector:
+    app: posts
+  ports: 
+    - name: posts #can be anything, mainly kep as the file
+      protocol:  TCP
+      port: 4000 #For node port service 
+      targetPort: 4000 
