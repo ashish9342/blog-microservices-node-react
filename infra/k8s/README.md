@@ -11,6 +11,19 @@ docker push daemonwolfdev/event-bus
 
 # Create a cluster IP servicesfor event bus and posts
 - 
+
+# Load balancer
+- get traffic in to a single pod
+
+# Ingress
+- a pod with a set of routing rules to distribute traffice to other services
+
+
 ==============================================
 `kubectl get pods`
 - gets all the pod
+
+ `kubectl apply -f .`
+
+ `kubectl rollout restart deployment event-bus-depl`
+ - gets the new code deployed
